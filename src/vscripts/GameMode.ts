@@ -1,3 +1,4 @@
+import { skywrath_mage_arcane_bolt_custom } from "./abilities/heroes/skywrath_mage/skywrath_mage_arcane_bolt_custom";
 import { reloadable } from "./lib/tstl-utils";
 import { modifier_panic } from "./modifiers/modifier_panic";
 
@@ -12,8 +13,8 @@ declare global {
 @reloadable
 export class GameMode {
     public static Precache(this: void, context: CScriptPrecacheContext) {
-        PrecacheResource("particle", "particles/units/heroes/hero_meepo/meepo_earthbind_projectile_fx.vpcf", context);
-        PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts", context);
+        PrecacheResource("particle", "particles/units/heroes/hero_phantom_assassin/phantom_assassin_stifling_dagger.vpcf", context);
+        PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts", context);
     }
 
     public static Activate(this: void) {
@@ -100,9 +101,14 @@ export class GameMode {
         const unit = EntIndexToHScript(event.entindex) as CDOTA_BaseNPC; // Cast to npc since this is the 'npc_spawned' event
         // Give all real heroes (not illusions) the meepo_earthbind_ts_example spell
         if (unit.IsRealHero()) {
-            if (!unit.HasAbility("meepo_earthbind_ts_example")) {
-                // Add lua ability to the unit
-                unit.AddAbility("meepo_earthbind_ts_example");
+            // if (!unit.HasAbility("meepo_earthbind_ts_example")) {
+            //     // Add lua ability to the unit
+            //     unit.AddAbility("meepo_earthbind_ts_example");
+            // }
+            print("hello poopyhead");
+            if (!unit.HasAbility("skywrath_mage_arcane_bolt_custom")) {
+                print("Testing adding skywrath_mage_arcane_bolt_custom to ", unit.GetUnitName());
+                unit.AddAbility("skywrath_mage_arcane_bolt_custom");
             }
         }
     }
