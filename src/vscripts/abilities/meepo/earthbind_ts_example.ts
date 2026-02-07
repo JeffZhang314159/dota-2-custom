@@ -1,4 +1,4 @@
-import { BaseAbility, registerAbility } from "../../../lib/dota_ts_adapter";
+import { BaseAbility, registerAbility } from "../../lib/dota_ts_adapter";
 
 @registerAbility()
 export class meepo_earthbind_ts_example extends BaseAbility {

@@ -1,0 +1,55 @@
+// Rewrite of the Pudge Meat Hook ability
+// Author: Valve
+// Date: 25.09.2015.
+
+"DOTAAbilities"
+{
+    "pudge_meat_hook_custom"
+    {
+        // General
+        "BaseClass"						"ability_lua"
+        "AbilityTextureName"			"pudge_meat_hook"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+        "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel"				"1"
+        "ScriptFile"					"heroes/hero_pudge/pudge_meat_hook_custom.lua"	
+
+        // Precache
+        //-------------------------------------------------------------------------------------------------------------
+        "precache"
+        {
+            "soundfile"			"soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts"
+            "particle"			"particles/units/heroes/hero_pudge/pudge_meathook_chain.vpcf"
+            "particle"			"particles/units/heroes/hero_pudge/pudge_meathook_impact.vpcf"
+            "particle"			"particles/units/heroes/hero_pudge/pudge_meathook.vpcf"
+        }
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"				"1000 2000 4000 8000"
+        "AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+        // Time		
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"				"14 13 12 11"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"				"110 120 130 140"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "hook_speed"                            "1600.0"
+            "hook_width"		                    "100"
+            "hook_distance"		                    "1000 1100 1200 1300"
+            "vision_radius"		                    "500 500 500 500"
+            "vision_duration"	                    "4.0 4.0 4.0 4.0"
+            "hook_followthrough_constant"			"0.65"
+            "hook_damage"		                    "90 180 270 360"
+        }
+    }
+}
+

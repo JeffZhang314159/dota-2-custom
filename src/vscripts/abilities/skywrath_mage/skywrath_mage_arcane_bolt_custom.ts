@@ -1,4 +1,4 @@
-import { BaseAbility, registerAbility } from "../../../lib/dota_ts_adapter";
+import { BaseAbility, registerAbility } from "../../lib/dota_ts_adapter";
 
 @registerAbility()
 export class skywrath_mage_arcane_bolt_custom extends BaseAbility {

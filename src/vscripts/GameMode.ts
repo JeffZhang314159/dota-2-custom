@@ -1,4 +1,4 @@
-import { skywrath_mage_arcane_bolt_custom } from "./abilities/heroes/skywrath_mage/skywrath_mage_arcane_bolt_custom";
+import { skywrath_mage_arcane_bolt_custom } from "./abilities/skywrath_mage/skywrath_mage_arcane_bolt_custom";
 import { reloadable } from "./lib/tstl-utils";
 import { modifier_panic } from "./modifiers/modifier_panic";
 
@@ -106,10 +106,6 @@ export class GameMode {
             //     unit.AddAbility("meepo_earthbind_ts_example");
             // }
             print("hello poopyhead");
-            if (!unit.HasAbility("skywrath_mage_arcane_bolt_custom")) {
-                print("Testing adding skywrath_mage_arcane_bolt_custom to ", unit.GetUnitName());
-                unit.AddAbility("skywrath_mage_arcane_bolt_custom");
-            }
         }
     }
 }
